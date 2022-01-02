@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta property="og:title" content="GitHub 個人資料卡片" />
+        <meta property="og:description" content="GitHub 個人資料卡上會有使用者已在 GitHub 上公開的資訊，你可以藉此進一步瞭解他們。" />
+        <meta property="og:locale" content="zh_TW" />
+        <meta property="og:type" content="website" />
+        <link rel="stylesheet" href="css/github-profile-card.css" />
+        <title>GitHub 個人資料卡片</title>
+    </head>
+    <body>
+        <div class="row">
+            <h1 id="github-profile-card">
+                <a href="https://www.jsdelivr.com/package/npm/github-profile-card">GitHub 個人資料卡片</a>
+            </h1>
+            <div class="config-section-left">
+                <form action="" class="tooltip choose-user">
+                    <input type="text" placeholder="GitHub 用戶名稱" id="gh-uname" />
+                    <input type="submit" id="gh-uname-submit" value="提交" />
+                </form>
+                <form action="" class="tooltip choose-repos-num">
+                    <label for="gh-reposNum">儲存庫：</label>
+                    <input type="number" min="0" max="10" value="5" id="gh-reposNum" />
+                </form>
+                <form action="" class="tooltip choose-repo-sorting">
+                    <input type="radio" name="repo-sorting" id="last-updated" value="" />
+                    <label for="last-updated">最後更新時間</label>
+                    <br />
+                    <input type="radio" name="repo-sorting" id="most-starred" value="" checked />
+                    <label for="most-starred" class="active">最多星數</label>
+                </form>
+            </div>
+            <div class="content-section">
+                <div id="github-card-sample" data-username="henryleeworld" style="width: 290px;"></div>
+            </div>
+        </div>
+        <h2>
+            如何套用：
+        </h2>
+        <div class="row">
+            <div class="pre">
+                <textarea id="install-code" readonly="1" rows="6" spellcheck="false" onclick="this.focus(); this.select()"></textarea>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/github-profile-card@3.1.0/dist/gh-profile-card.min.js" defer></script>
+        <script type="text/javascript" src="js/widget-generator.js" defer></script>
+        <script type="text/javascript" src="js/github-profile-card.js" defer></script>
+    </body>
+</html>
